@@ -4,6 +4,28 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { AccessTime } from "@mui/icons-material";
 import Rating from "@mui/material/Rating";
+import { createTheme, ThemeProvider } from "@mui/material";
+
+const theme = createTheme({
+  components: {
+    MuiTypography: {
+      variants: [
+        {
+          props: { variant: "body2" },
+
+          style: {
+            fontSize: 11,
+          },
+        },
+        {
+          props: { variant: "body3" },
+
+          style: { frontSize: 9 },
+        },
+      ],
+    },
+  },
+});
 
 const TourCard = () => {
   return (
